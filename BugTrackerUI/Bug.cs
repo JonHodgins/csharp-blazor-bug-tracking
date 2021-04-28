@@ -13,10 +13,10 @@ namespace BugTrackerUI
         [Required]
         public string Title { get; set; }
 
-        [Required, MinLength(10)]
+        [Required, MinLength(10, ErrorMessage ="Description must contain at least 10 characters.")]
         public string Description { get; set; }
 
-        [Required, Range(1, 5)]
+        [Required, Range(1, 5, ErrorMessage ="Priority must be between 1 and 5")]
         public int Priority { get; set; }
     }
 }
